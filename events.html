@@ -50,7 +50,14 @@
   <meta name="msapplication-navbutton-color" content="#0e0d26">
   <meta name="apple-mobile-web-app-status-bar-style" content="#0e0d26">
   <!-- Custom Browser Color End -->
- 
+ <style>
+    .inner__content{
+        padding:0px;
+    }
+    .some_content{
+        padding: 140px 0px;
+    }
+ </style>
 </head>
 
 <body>
@@ -159,12 +166,13 @@
 
                     <!-- Navigation Start -->
                     <ul class="navigation">
+                        <li>
+                            <a href="./events.html" id="about-trigger">Home</a>
+                          </li>
                       <li>
-                        <a href="#0" id="home-trigger">Home</a>
+                        <a href="#0" id="home-trigger">Events</a>
                       </li>
-                      <li>
-                        <a href="./events.html" id="about-trigger">Events</a>
-                      </li>
+                     
                       <!-- <li>
                           <a href="#0" id="portfolio-trigger">Portfolio</a>
                         </li> -->
@@ -330,382 +338,395 @@
 
   <!-- Main Section Start -->
   <section id="main" class="main active">
-    <div class="main__content">
-      <div class="container-fluid p-0 fullheight">
+   
+
+
+    <div class="container-fluid p-0 fullheight">
         <div class="row g-0 fullheight">
-
-          <!-- Main Section Intro Start -->
-
-          <div class="col-12 col-xl-8 main__intro videobox">
-
-            <video autoplay muted loop id="myVideo" class="video">
-              <source src="./img/video.mp4" type="video/mp4">
-            </video>
-
-          </div>
-          <!-- Intro Content Start -->
-          <!-- <div class="intro__content"> -->
-
-          <!-- Headline Start -->
-
-          <!-- Headline End -->
-
-          <!-- </div> -->
-          <!-- Intro Content End -->
-
-          <!-- Bottom Button Start -->
-
-          <!-- Bottom Button End -->
-
-
-          <!-- Main Section Intro End -->
-          <div id="headline " class="headline">
-            <div class="intro__background">
-              <!-- triangles background -->
-              <div id="triangles-js"></div>
-            </div>
-            <span class="headline__subtitle">biggest fest</span>
-            <h1 class="animated-headline medium">
-              Crescendo
-              <br>
-              <span id="typed-strings">
-                <b>hackathons</b>
-                <b>Coding</b>
-                <b>Web design</b>
-              </span>
-              <span id="typed"></span>
-            </h1>
-            <div class="headline__numblock d-flex align-items-start">
-              <div class="numblock block-rounded-m d-flex flex-column flex-sm-row align-items-sm-center">
-                <span class="numblock__number">10+</span>
-                <span class="numblock__descr">Mad</br>Events</span>
-              </div>
-              <div class="numblock block-rounded-m d-flex flex-column flex-sm-row align-items-sm-center">
-                <span class="numblock__number">20+</span>
-                <span class="numblock__descr">Hours of</br> events</span>
-              </div>
-            </div>
-          </div>
-          <div class="intro__button">
-          
-            <a href="./events.html" class="btn-bottom"id="about-trigger">
-              <span class="circle">
-                <em></em>
-                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px"
-                  viewBox="0 0 24 24" width="24px">
-                  <rect fill="none" height="24" width="24" />
-                  <path
-                    d="M14.29,5.71L14.29,5.71c-0.39,0.39-0.39,1.02,0,1.41L18.17,11H3c-0.55,0-1,0.45-1,1v0c0,0.55,0.45,1,1,1h15.18l-3.88,3.88 c-0.39,0.39-0.39,1.02,0,1.41l0,0c0.39,
-                    0.39,1.02,0.39,1.41,0l5.59-5.59c0.39-0.39,0.39-1.02,0-1.41L15.7,5.71 C15.32,5.32,14.68,5.32,14.29,5.71z" />
-                </svg>
-              </span>
-              <span class="caption" >Explore</span>
-            </a>
-          </div>
-          <!-- Main Section Media Start -->
-          <div class="col-12 col-xl-4 main__media">
-
-            <!-- Main Section Image Background Start -->
-            <div class="media__image media-image-1"></div>
-            <!-- Main Section Image Background End -->
-
-            <!-- Main Section Swiper Slider Start -->
-            <!-- slider main container -->
-            <div class="swiper">
-              <!-- additional required wrapper -->
-              <div class="swiper-wrapper">
-                <!-- slides -->
-                <div class="swiper-slide">
-                  <div class="slide-image slide-image-1"></div>
-                  <div class="slide-caption text-end" data-swiper-parallax="-250" data-swiper-parallax-opacity="0">
-                    <p>
-                      <a href="#0" id="project-trigger-1">
-                        Sleep in Clouds
-                      </a>
-                      <span>3D Render</span>
-                    </p>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="slide-image slide-image-2"></div>
-                  <div class="slide-caption text-end" data-swiper-parallax="-250" data-swiper-parallax-opacity="0">
-                    <p>
-                      <a href="#0" id="project-trigger-2">
-                        Shadow Project
-                      </a>
-                      <span>Photography</span>
-                    </p>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="slide-image slide-image-3"></div>
-                  <div class="slide-caption text-end" data-swiper-parallax="-250" data-swiper-parallax-opacity="0">
-                    <p>
-                      <a href="#0" id="project-trigger-3">
-                        Circle Objects
-                      </a>
-                      <span>3D Render</span>
-                    </p>
-                  </div>
+  
+          <!-- About Section Content Start -->
+          <div class="col-12 col-xl-8 inner__content ">
+            <!-- desktop shadow -->
+            <div class="desktop-shadow"></div>
+            <!-- inner section blocks -->
+            <div class="inner__blocks">
+  
+              <!-- Section Container - Section Title Start -->
+              <div class="inner__container">
+                <div class="content-block">
+                  <span class="section__subtitle">Creativity is above all.</span>
+                  <h2>Explore a wide variety of events</h2>
+  
                 </div>
               </div>
-              <!-- pagination -->
-              <div class="swiper-pagination marvio-pagination"></div>
-              <!-- navigation buttons -->
-              <div class="swiper-button-prev marvio-navigation marvio-prev"><i class="fa-solid fa-angle-left"></i></div>
-              <div class="swiper-button-next marvio-navigation marvio-next"><i class="fa-solid fa-angle-right"></i>
+              <!-- Section Container - Section Title End -->
+  
+              <!-- Section Container - Features Start -->
+              <div class="inner__container">
+                <div class="content-block grid-block">
+                  <div class="container-fluid px-4">
+                    <div class="row gx-5 align-items-stretch">
+                      <!-- feature single item -->
+                      <div class="col-12 col-md-4 feature">
+                        <div class="feature__item block-rounded-l">
+                          <div class="feature__image block-rounded-m">
+                            <img src="img/backgrounds/500x500-features-bg-1.jpg" alt="Marvio Feature Background">
+                            <div class="feature__icon">
+                              <!-- <img src="img/svg/icon-feature-1.svg" alt="Marvio Feature Icon"> -->
+                            </div>
+                          </div>
+                          <div class="feature__descr">
+                            <span class="feature__subtitle">Lovely</span>
+                            <h4 class="feature__title">Sai music fest</h4>
+                            <p class="feature__text">lets rock the night with light and colours</p>
+                          </div>
+                          <div style="display: flex;justify-content: flex-end;">
+                            <a href="https://grand-kelpie-a812ad.netlify.app/" class="btn-bottom">
+                              <span class="circle2">
+                                <em></em>
+                                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px"
+                                  viewBox="0 0 24 24" width="24px">
+                                  <rect fill="none" height="24" width="24" />
+                                  <path
+                                    d="M14.29,5.71L14.29,5.71c-0.39,0.39-0.39,1.02,0,1.41L18.17,11H3c-0.55,0-1,0.45-1,1v0c0,0.55,0.45,1,1,1h15.18l-3.88,3.88 c-0.39,0.39-0.39,1.02,0,1.41l0,0c0.39,
+                                  0.39,1.02,0.39,1.41,0l5.59-5.59c0.39-0.39,0.39-1.02,0-1.41L15.7,5.71 C15.32,5.32,14.68,5.32,14.29,5.71z" />
+                                </svg>
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- feature single item -->
+                      <div class="col-12 col-md-4 feature">
+                        <div class="feature__item block-rounded-l">
+                          <div class="feature__image block-rounded-m">
+                            <img src="img/backgrounds/500x500-features-bg-2.jpg" alt="Marvio Feature Background">
+                            <div class="feature__icon">
+                              <!-- <img src="img/svg/icon-feature-2.svg" alt="Marvio Feature Icon"> -->
+                            </div>
+                          </div>
+                          <div class="feature__descr">
+                            <span class="feature__subtitle">Bright</span>
+                            <h4 class="feature__title">Sai music fest</h4>
+                            <p class="feature__text">lets rock the night with light and colours</p>
+                          </div>
+                          <div style="display: flex;justify-content: flex-end;">
+                            <a href="https://grand-kelpie-a812ad.netlify.app/" class="btn-bottom">
+                              <span class="circle2">
+                                <em></em>
+                                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px"
+                                  viewBox="0 0 24 24" width="24px">
+                                  <rect fill="none" height="24" width="24" />
+                                  <path
+                                    d="M14.29,5.71L14.29,5.71c-0.39,0.39-0.39,1.02,0,1.41L18.17,11H3c-0.55,0-1,0.45-1,1v0c0,0.55,0.45,1,1,1h15.18l-3.88,3.88 c-0.39,0.39-0.39,1.02,0,1.41l0,0c0.39,
+                                  0.39,1.02,0.39,1.41,0l5.59-5.59c0.39-0.39,0.39-1.02,0-1.41L15.7,5.71 C15.32,5.32,14.68,5.32,14.29,5.71z" />
+                                </svg>
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- feature single item -->
+                      <div class="col-12 col-md-4 feature">
+                        <div class="feature__item block-rounded-l">
+                          <div class="feature__image block-rounded-m">
+                            <img src="img/backgrounds/500x500-features-bg-3.webp" alt="Marvio Feature Background">
+                            <div class="feature__icon">
+                              <!-- <img src="img/svg/icon-feature-3.svg" alt="Marvio Feature Icon"> -->
+                            </div>
+                          </div>
+                          <div class="feature__descr">
+                            <span class="feature__subtitle">Unique</span>
+                            <h4 class="feature__title">Sai music fest</h4>
+                            <p class="feature__text">lets rock the night with light and colours</p>
+                          </div>
+                          <div style="display: flex;justify-content: flex-end;">
+                            <a href="https://grand-kelpie-a812ad.netlify.app/" class="btn-bottom">
+                              <span class="circle2">
+                                <em></em>
+                                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px"
+                                  viewBox="0 0 24 24" width="24px">
+                                  <rect fill="none" height="24" width="24" />
+                                  <path
+                                    d="M14.29,5.71L14.29,5.71c-0.39,0.39-0.39,1.02,0,1.41L18.17,11H3c-0.55,0-1,0.45-1,1v0c0,0.55,0.45,1,1,1h15.18l-3.88,3.88 c-0.39,0.39-0.39,1.02,0,1.41l0,0c0.39,
+                                  0.39,1.02,0.39,1.41,0l5.59-5.59c0.39-0.39,0.39-1.02,0-1.41L15.7,5.71 C15.32,5.32,14.68,5.32,14.29,5.71z" />
+                                </svg>
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
+              <!-- Section Container - Features End -->
+  
+              <!-- Section Container - Skillbars Start -->
+              <!-- <div class="inner__container">
+                  <div class="content-block"> -->
+              <!-- skillbar single item -->
+              <!-- <div class="show-skillbar">
+                      <div class="skillbar" data-percent="96">
+                        <span class="skillbar-title">UI/UX Design</span>
+                        <p class="skillbar-bar"></p>
+                        <span class="skill-bar-percent"></span>
+                      </div>
+                    </div> -->
+              <!-- skillbar single item -->
+              <!-- <div class="show-skillbar">
+                      <div class="skillbar" data-percent="90">
+                        <span class="skillbar-title">Branding & Logo Design</span>
+                        <p class="skillbar-bar"></p>
+                        <span class="skill-bar-percent"></span>
+                      </div>
+                    </div> -->
+              <!-- skillbar single item -->
+              <!-- <div class="show-skillbar">
+                      <div class="skillbar" data-percent="87">
+                        <span class="skillbar-title">3D Modeling</span>
+                        <p class="skillbar-bar"></p>
+                        <span class="skill-bar-percent"></span>
+                      </div>
+                    </div> -->
+              <!-- skillbar single item -->
+              <!-- <div class="show-skillbar">
+                      <div class="skillbar" data-percent="98">
+                        <span class="skillbar-title">Illustrations</span>
+                        <p class="skillbar-bar"></p>
+                        <span class="skill-bar-percent"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div> -->
+              <!-- Section Container - Skillbars End -->
+  
+              <!-- Section Container - Showreel Start -->
+              <!-- <div class="inner__container">
+                  <div class="content-block">
+                    <div class="fullwidth-container">
+                      <div class="showreel showreel-image-1 block-rounded-l">
+                        <div class="showreel__button"> -->
+              <!-- video trigger -->
+              <!-- <a href="https://vimeo.com/65036292" id="inner-video-trigger" class="inner-video-trigger">
+                            <em></em>
+                            <i class="fa-solid fa-play"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div> -->
+              <!-- Section Container - Showreel End -->
+  
             </div>
-            <!-- Main Section Swiper Slider Start -->
-
           </div>
-          <!-- Main Section Media End -->
-
-          <!-- Sosials Mobile Start -->
-          <div class="col-12 socials-mobile">
-            <ul>
-              <li>
-                <a href="https://www.facebook.com/" target="_blank">
-                  <i class="fa-brands fa-facebook"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.instagram.com/" target="_blank">
-                  <i class="fa-brands fa-instagram"></i>
-                </a>
-              </li>
-              <!-- <li>
-                <a href="https://www.pinterest.com/" target="_blank">
-                  <i class="fa-brands fa-pinterest"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.behance.net/" target="_blank">
-                  <i class="fa-brands fa-behance"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://twitter.com/" target="_blank">
-                  <i class="fa-brands fa-twitter"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://dribbble.com/" target="_blank">
-                  <i class="fa-brands fa-dribbble"></i>
-                </a>
-              </li> -->
-            </ul>
+          <!-- About Section Content End -->
+  
+          <!-- About Section Media Start -->
+          <div class="col-12 col-xl-4 inner__media">
+  
+            <!-- About Section Image Background Start -->
+            <div class="image media-image-about"></div>
+            <!-- About Section Image Background End -->
+  
           </div>
-          <!-- Sosials Mobile End -->
-
+          <!-- About Section Media End -->
+  
         </div>
       </div>
-    </div>
   </section>
   <!-- Main Section End -->
 
   <!-- About Section Start -->
   <section id="about" class="inner about">
-    <div class="container-fluid p-0 fullheight">
-      <div class="row g-0 fullheight">
-
-        <!-- About Section Content Start -->
-        <div class="col-12 col-xl-8 inner__content">
-          <!-- desktop shadow -->
-          <div class="desktop-shadow"></div>
-          <!-- inner section blocks -->
-          <div class="inner__blocks">
-
-            <!-- Section Container - Section Title Start -->
-            <div class="inner__container">
-              <div class="content-block">
-                <span class="section__subtitle">Creativity is above all.</span>
-                <h2>Explore a wide variety of events</h2>
-
-              </div>
+    <div class="main__content some_content">
+        <div class="container-fluid p-0 fullheight">
+          <div class="row g-0 fullheight">
+  
+            <!-- Main Section Intro Start -->
+  
+            <div class="col-12 col-xl-8 main__intro videobox">
+  
+              <video autoplay muted loop id="myVideo" class="video">
+                <source src="./img/video.mp4" type="video/mp4">
+              </video>
+  
             </div>
-            <!-- Section Container - Section Title End -->
-
-            <!-- Section Container - Features Start -->
-            <div class="inner__container">
-              <div class="content-block grid-block">
-                <div class="container-fluid px-4">
-                  <div class="row gx-5 align-items-stretch">
-                    <!-- feature single item -->
-                    <div class="col-12 col-md-4 feature">
-                      <div class="feature__item block-rounded-l">
-                        <div class="feature__image block-rounded-m">
-                          <img src="img/backgrounds/500x500-features-bg-1.jpg" alt="Marvio Feature Background">
-                          <div class="feature__icon">
-                            <!-- <img src="img/svg/icon-feature-1.svg" alt="Marvio Feature Icon"> -->
-                          </div>
-                        </div>
-                        <div class="feature__descr">
-                          <span class="feature__subtitle">Lovely</span>
-                          <h4 class="feature__title">Sai music fest</h4>
-                          <p class="feature__text">lets rock the night with light and colours</p>
-                        </div>
-                        <div style="display: flex;justify-content: flex-end;">
-                          <a href="https://grand-kelpie-a812ad.netlify.app/" class="btn-bottom">
-                            <span class="circle2">
-                              <em></em>
-                              <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px"
-                                viewBox="0 0 24 24" width="24px">
-                                <rect fill="none" height="24" width="24" />
-                                <path
-                                  d="M14.29,5.71L14.29,5.71c-0.39,0.39-0.39,1.02,0,1.41L18.17,11H3c-0.55,0-1,0.45-1,1v0c0,0.55,0.45,1,1,1h15.18l-3.88,3.88 c-0.39,0.39-0.39,1.02,0,1.41l0,0c0.39,
-                                0.39,1.02,0.39,1.41,0l5.59-5.59c0.39-0.39,0.39-1.02,0-1.41L15.7,5.71 C15.32,5.32,14.68,5.32,14.29,5.71z" />
-                              </svg>
-                            </span>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- feature single item -->
-                    <div class="col-12 col-md-4 feature">
-                      <div class="feature__item block-rounded-l">
-                        <div class="feature__image block-rounded-m">
-                          <img src="img/backgrounds/500x500-features-bg-2.jpg" alt="Marvio Feature Background">
-                          <div class="feature__icon">
-                            <!-- <img src="img/svg/icon-feature-2.svg" alt="Marvio Feature Icon"> -->
-                          </div>
-                        </div>
-                        <div class="feature__descr">
-                          <span class="feature__subtitle">Bright</span>
-                          <h4 class="feature__title">Sai music fest</h4>
-                          <p class="feature__text">lets rock the night with light and colours</p>
-                        </div>
-                        <div style="display: flex;justify-content: flex-end;">
-                          <a href="https://grand-kelpie-a812ad.netlify.app/" class="btn-bottom">
-                            <span class="circle2">
-                              <em></em>
-                              <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px"
-                                viewBox="0 0 24 24" width="24px">
-                                <rect fill="none" height="24" width="24" />
-                                <path
-                                  d="M14.29,5.71L14.29,5.71c-0.39,0.39-0.39,1.02,0,1.41L18.17,11H3c-0.55,0-1,0.45-1,1v0c0,0.55,0.45,1,1,1h15.18l-3.88,3.88 c-0.39,0.39-0.39,1.02,0,1.41l0,0c0.39,
-                                0.39,1.02,0.39,1.41,0l5.59-5.59c0.39-0.39,0.39-1.02,0-1.41L15.7,5.71 C15.32,5.32,14.68,5.32,14.29,5.71z" />
-                              </svg>
-                            </span>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- feature single item -->
-                    <div class="col-12 col-md-4 feature">
-                      <div class="feature__item block-rounded-l">
-                        <div class="feature__image block-rounded-m">
-                          <img src="img/backgrounds/500x500-features-bg-3.webp" alt="Marvio Feature Background">
-                          <div class="feature__icon">
-                            <!-- <img src="img/svg/icon-feature-3.svg" alt="Marvio Feature Icon"> -->
-                          </div>
-                        </div>
-                        <div class="feature__descr">
-                          <span class="feature__subtitle">Unique</span>
-                          <h4 class="feature__title">Sai music fest</h4>
-                          <p class="feature__text">lets rock the night with light and colours</p>
-                        </div>
-                        <div style="display: flex;justify-content: flex-end;">
-                          <a href="https://grand-kelpie-a812ad.netlify.app/" class="btn-bottom">
-                            <span class="circle2">
-                              <em></em>
-                              <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px"
-                                viewBox="0 0 24 24" width="24px">
-                                <rect fill="none" height="24" width="24" />
-                                <path
-                                  d="M14.29,5.71L14.29,5.71c-0.39,0.39-0.39,1.02,0,1.41L18.17,11H3c-0.55,0-1,0.45-1,1v0c0,0.55,0.45,1,1,1h15.18l-3.88,3.88 c-0.39,0.39-0.39,1.02,0,1.41l0,0c0.39,
-                                0.39,1.02,0.39,1.41,0l5.59-5.59c0.39-0.39,0.39-1.02,0-1.41L15.7,5.71 C15.32,5.32,14.68,5.32,14.29,5.71z" />
-                              </svg>
-                            </span>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+            <!-- Intro Content Start -->
+            <!-- <div class="intro__content"> -->
+  
+            <!-- Headline Start -->
+  
+            <!-- Headline End -->
+  
+            <!-- </div> -->
+            <!-- Intro Content End -->
+  
+            <!-- Bottom Button Start -->
+  
+            <!-- Bottom Button End -->
+  
+  
+            <!-- Main Section Intro End -->
+            <div id="headline " class="headline">
+              <div class="intro__background">
+                <!-- triangles background -->
+                <div id="triangles-js"></div>
+              </div>
+              <span class="headline__subtitle">biggest fest</span>
+              <h1 class="animated-headline medium">
+                Crescendo
+                <br>
+                <span id="typed-strings">
+                  <b>hackathons</b>
+                  <b>Coding</b>
+                  <b>Web design</b>
+                </span>
+                <span id="typed"></span>
+              </h1>
+              <div class="headline__numblock d-flex align-items-start">
+                <div class="numblock block-rounded-m d-flex flex-column flex-sm-row align-items-sm-center">
+                  <span class="numblock__number">10+</span>
+                  <span class="numblock__descr">Mad</br>Events</span>
+                </div>
+                <div class="numblock block-rounded-m d-flex flex-column flex-sm-row align-items-sm-center">
+                  <span class="numblock__number">20+</span>
+                  <span class="numblock__descr">Hours of</br> events</span>
                 </div>
               </div>
             </div>
-            <!-- Section Container - Features End -->
-
-            <!-- Section Container - Skillbars Start -->
-            <!-- <div class="inner__container">
-                <div class="content-block"> -->
-            <!-- skillbar single item -->
-            <!-- <div class="show-skillbar">
-                    <div class="skillbar" data-percent="96">
-                      <span class="skillbar-title">UI/UX Design</span>
-                      <p class="skillbar-bar"></p>
-                      <span class="skill-bar-percent"></span>
-                    </div>
-                  </div> -->
-            <!-- skillbar single item -->
-            <!-- <div class="show-skillbar">
-                    <div class="skillbar" data-percent="90">
-                      <span class="skillbar-title">Branding & Logo Design</span>
-                      <p class="skillbar-bar"></p>
-                      <span class="skill-bar-percent"></span>
-                    </div>
-                  </div> -->
-            <!-- skillbar single item -->
-            <!-- <div class="show-skillbar">
-                    <div class="skillbar" data-percent="87">
-                      <span class="skillbar-title">3D Modeling</span>
-                      <p class="skillbar-bar"></p>
-                      <span class="skill-bar-percent"></span>
-                    </div>
-                  </div> -->
-            <!-- skillbar single item -->
-            <!-- <div class="show-skillbar">
-                    <div class="skillbar" data-percent="98">
-                      <span class="skillbar-title">Illustrations</span>
-                      <p class="skillbar-bar"></p>
-                      <span class="skill-bar-percent"></span>
-                    </div>
-                  </div>
-                </div>
-              </div> -->
-            <!-- Section Container - Skillbars End -->
-
-            <!-- Section Container - Showreel Start -->
-            <!-- <div class="inner__container">
-                <div class="content-block">
-                  <div class="fullwidth-container">
-                    <div class="showreel showreel-image-1 block-rounded-l">
-                      <div class="showreel__button"> -->
-            <!-- video trigger -->
-            <!-- <a href="https://vimeo.com/65036292" id="inner-video-trigger" class="inner-video-trigger">
-                          <em></em>
-                          <i class="fa-solid fa-play"></i>
+            <div class="intro__button">
+            
+              <a href="./events.html" class="btn-bottom"id="about-trigger">
+                <span class="circle">
+                  <em></em>
+                  <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px"
+                    viewBox="0 0 24 24" width="24px">
+                    <rect fill="none" height="24" width="24" />
+                    <path
+                      d="M14.29,5.71L14.29,5.71c-0.39,0.39-0.39,1.02,0,1.41L18.17,11H3c-0.55,0-1,0.45-1,1v0c0,0.55,0.45,1,1,1h15.18l-3.88,3.88 c-0.39,0.39-0.39,1.02,0,1.41l0,0c0.39,
+                      0.39,1.02,0.39,1.41,0l5.59-5.59c0.39-0.39,0.39-1.02,0-1.41L15.7,5.71 C15.32,5.32,14.68,5.32,14.29,5.71z" />
+                  </svg>
+                </span>
+                <span class="caption" >Explore</span>
+              </a>
+            </div>
+            <!-- Main Section Media Start -->
+            <div class="col-12 col-xl-4 main__media">
+  
+              <!-- Main Section Image Background Start -->
+              <div class="media__image media-image-1"></div>
+              <!-- Main Section Image Background End -->
+  
+              <!-- Main Section Swiper Slider Start -->
+              <!-- slider main container -->
+              <div class="swiper">
+                <!-- additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- slides -->
+                  <div class="swiper-slide">
+                    <div class="slide-image slide-image-1"></div>
+                    <div class="slide-caption text-end" data-swiper-parallax="-250" data-swiper-parallax-opacity="0">
+                      <p>
+                        <a href="#0" id="project-trigger-1">
+                          Sleep in Clouds
                         </a>
-                      </div>
+                        <span>3D Render</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="slide-image slide-image-2"></div>
+                    <div class="slide-caption text-end" data-swiper-parallax="-250" data-swiper-parallax-opacity="0">
+                      <p>
+                        <a href="#0" id="project-trigger-2">
+                          Shadow Project
+                        </a>
+                        <span>Photography</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="slide-image slide-image-3"></div>
+                    <div class="slide-caption text-end" data-swiper-parallax="-250" data-swiper-parallax-opacity="0">
+                      <p>
+                        <a href="#0" id="project-trigger-3">
+                          Circle Objects
+                        </a>
+                        <span>3D Render</span>
+                      </p>
                     </div>
                   </div>
                 </div>
-              </div> -->
-            <!-- Section Container - Showreel End -->
-
+                <!-- pagination -->
+                <div class="swiper-pagination marvio-pagination"></div>
+                <!-- navigation buttons -->
+                <div class="swiper-button-prev marvio-navigation marvio-prev"><i class="fa-solid fa-angle-left"></i></div>
+                <div class="swiper-button-next marvio-navigation marvio-next"><i class="fa-solid fa-angle-right"></i>
+                </div>
+              </div>
+              <!-- Main Section Swiper Slider Start -->
+  
+            </div>
+            <!-- Main Section Media End -->
+  
+            <!-- Sosials Mobile Start -->
+            <div class="col-12 socials-mobile">
+              <ul>
+                <li>
+                  <a href="https://www.facebook.com/" target="_blank">
+                    <i class="fa-brands fa-facebook"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                </li>
+                <!-- <li>
+                  <a href="https://www.pinterest.com/" target="_blank">
+                    <i class="fa-brands fa-pinterest"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.behance.net/" target="_blank">
+                    <i class="fa-brands fa-behance"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/" target="_blank">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://dribbble.com/" target="_blank">
+                    <i class="fa-brands fa-dribbble"></i>
+                  </a>
+                </li> -->
+              </ul>
+            </div>
+            <!-- Sosials Mobile End -->
+  
           </div>
         </div>
-        <!-- About Section Content End -->
-
-        <!-- About Section Media Start -->
-        <div class="col-12 col-xl-4 inner__media">
-
-          <!-- About Section Image Background Start -->
-          <div class="image media-image-about"></div>
-          <!-- About Section Image Background End -->
-
-        </div>
-        <!-- About Section Media End -->
-
       </div>
-    </div>
+
+
+
+
+
+
+
+
+
+
   </section>
   <!-- About Section End -->
 
   <!-- Portfolio Section Start -->
   <section id="portfolio" class="inner portfolio">
-    <div class="container-fluid p-0 fullheight">
+    <div class="container-fluid p-0 fullheight some_content">
       <div class="row g-0 fullheight">
 
         <!-- Portfolio Section Content Start -->
