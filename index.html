@@ -60,6 +60,65 @@
     background-color: #0E0D26;
   }
 }
+
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+  height: 100%;
+  width: 100%;
+  position: fixed; /* Stay in place */
+  z-index: 3; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(33, 29, 70); /* Black fallback color */
+  background-color: rgba(26, 24, 65, 0.95); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block; /* Display block instead of inline */
+  transition: 0.5s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  /* right: 45px; */
+  font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    /* right: 35px; */
+  }
+}
  </style>
 </head>
 
@@ -76,6 +135,7 @@
       </div>
     </div>
   </div>
+ 
   <!-- Loader End -->
 
   <!-- Menu Start -->
@@ -108,13 +168,8 @@
                         <div class="socials-menu">
                           <ul>
                             <li>
-                              <a href="https://www.facebook.com/" target="_blank">
-                                <i class="fa-brands fa-facebook"></i>
-                              </a>
-                            </li>
-                            <li>
-                              <a href="https://www.instagram.com/" target="_blank">
-                                <i class="fa-brands fa-instagram"></i>
+                              <a href="https://instagram.com/xtrofest_5.0?igshid=OGQ5ZDc2ODk2ZA==" target="_blank">
+                                <i class="fa-brands fa-4x fa-instagram"></i>
                               </a>
                             </li>
                             <!-- <li>
@@ -166,8 +221,8 @@
               <div class="container-fluid p-0">
                 <div class="row g-0 align-items-end">
                   <div class="col-12 col-md-6">
-
                     <!-- Navigation Start -->
+                    
                     <ul class="navigation">
                       <li>
                         <a href="#0" id="home-trigger">Home</a>
@@ -191,21 +246,15 @@
                     <ul class="menulinks__contact">
                       <li>
                         <p>
-                          <a class="contact-link"  target="_blank">sai leo nagar<br>tambaram, chennai 10019</a>
+                          <a class="contact-link"  target="_blank">Sri sairam engineering college<br>Sai leo nagar<br>West tambaram<br>Chennai-44</a>
                         </p>
                       </li>
                       
                       <li>
-                        <p><a class="contact-link" href="tel:+12127089400">+1 212-708-9400</a></p>
-                        <p><a class="contact-link" href="tel:+15104570211">+1 510-457-0211</a></p>
+                        <p><a class="contact-link" href="tel:9894480370">+91 9894480370</a></p>
+                        <p><a class="contact-link" href="tel:">+91 </a></p>
                       </li>
                       <li>
-                        <p><a class="contact-link"
-                            href="mailto:example@example.com?subject=Message%20from%20your%20site">xtrofest@crecendo.com</a>
-                        </p>
-                        <p><a class="contact-link"
-                            href="mailto:example@example.com?subject=Message%20from%20your%20site">support@crescendo.com</a>
-                        </p>
                       </li>
                     </ul>
                     <!-- Menu Contact Links End -->
@@ -221,8 +270,8 @@
               <div class="container-fluid p-0">
                 <div class="row g-0">
                   <div class="col-12">
-                    <p class="copyright">By <a href="https://themeforest.net/user/mix_design/portfolio"
-                        target="_blank">crescendo</a>, 2022</p>
+                    <p class="copyright">By <a href=""
+                        target="_blank">xtrofest</a>, 2023</p>
                   </div>
                 </div>
               </div>
@@ -252,10 +301,25 @@
 
   <!-- Header Start -->
   <header id="header" class="header">
+    <div id="myNav" class="overlay">
+
+      <!-- Button to close the overlay navigation -->
+      
+    
+      <!-- Overlay content -->
+      <div class="overlay-content">
+        <span class="feature__subtitle"style="font-size:2rem;">Welcome</span>
+          <img src="img/logo.png"style="height:8em; width:16em;margin-left:0.5em;">
+          <img src="img/go.png"style="height:3em;width:3em;"onclick="closeNav()">
+      </div>
+      
+
+    
+    </div>
 
     <!-- Logo Start -->
     <div class="header__logo">
-      <img src="img/images-removebg-preview.png"style="height:80px width:80px;" alt="Marvio - Coming Soon & Portfolio Template">
+      <img src="img/logo.png"style="height:4.5em;">
     </div>
     <!-- Logo End -->
 
@@ -271,14 +335,14 @@
               <!-- Socials Desktop Start -->
               <div class="socials-desktop">
                 <ul>
-                  <li>
+                  <!-- <li>
                     <a href="https://www.facebook.com/" target="_blank">
                       <i class="fa-brands fa-facebook"></i>
                     </a>
-                  </li>
+                  </li> -->
                   <li>
-                    <a href="https://www.instagram.com/" target="_blank">
-                      <i class="fa-brands fa-instagram"></i>
+                    <a href="https://instagram.com/xtrofest_5.0?igshid=OGQ5ZDc2ODk2ZA==" target="_blank">
+                      <i class="fa-brands fa-2x fa-instagram"></i>
                     </a>
                   </li>
                   <!-- <li>
@@ -322,7 +386,7 @@
           <div class="col-auto col-xl-4">
 
             <!-- Menu Trigger Start -->
-            <div class="header__menu d-flex justify-content-end">
+            <div class="header__menu d-flex justify-content-end" onclick="playMusic()">
               <a id="menu-trigger" class="menu-trigger" href="#0">
                 <span class="menu-objects"></span>
               </a>
@@ -340,6 +404,7 @@
 
   <!-- Main Section Start -->
   <section id="main" class="main active">
+   
     <div class="main__content">
       <div class="container-fluid p-0 fullheight">
         <div class="row g-0 fullheight">
@@ -374,29 +439,35 @@
               <!-- triangles background -->
               <div id="triangles-js"></div>
             </div>
-            <span class="headline__subtitle">biggest fest</span>
+            <span class="headline__subtitle">Sai tech excellence</span>
             <h1 class="animated-headline medium">
               Crescendo
               <br>
               <span id="typed-strings">
-                <b>hackathons</b>
+                <b>Gaming</b>
                 <b>Coding</b>
-                <b>Web design</b>
+                <b>Css design</b>
+                <b>Project presentation</b>
+                <b>Non technical</b>
               </span>
               <span id="typed"></span>
             </h1>
             <div class="headline__numblock d-flex align-items-start">
               <div class="numblock block-rounded-m d-flex flex-column flex-sm-row align-items-sm-center">
-                <span class="numblock__number">10+</span>
-                <span class="numblock__descr">Mad</br>Events</span>
+                <span class="numblock__number">₹30k</span>
+                <span class="numblock__descr">Prize</br>amount</span>
               </div>
               <div class="numblock block-rounded-m d-flex flex-column flex-sm-row align-items-sm-center">
-                <span class="numblock__number">20+</span>
-                <span class="numblock__descr">Hours of</br> events</span>
+                <span class="numblock__number">9+</span>
+                <span class="numblock__descr">Mad</br> events</span>
+              </div>
+              <div class="numblock block-rounded-m d-flex flex-column flex-sm-row align-items-sm-center">
+                <span class="numblock__number">2</span>
+                <span class="numblock__descr">Days of</br> events</span>
               </div>
             </div>
           </div>
-          <div class="intro__button">
+          <div class="intro__button" onclick="playMusic()">
           
             <a href="./events.html" class="btn-bottom"id="about-trigger">
               <span class="circle">
@@ -409,11 +480,11 @@
                     0.39,1.02,0.39,1.41,0l5.59-5.59c0.39-0.39,0.39-1.02,0-1.41L15.7,5.71 C15.32,5.32,14.68,5.32,14.29,5.71z" />
                 </svg>
               </span>
-              <span class="caption" >Explore</span>
+              <span class="caption">Explore</span>
             </a>
           </div>
           <!-- Main Section Media Start -->
-          <div class="col-12 col-xl-4 main__media cont-next">
+          <div class="col-12 col-xl-4 main__media ">
 
             <!-- Main Section Image Background Start -->
             <!-- <div class="media__image media-image-1"></div> -->
@@ -428,14 +499,14 @@
                 <div class="swiper-slide">
                   <div class="feature__item block-rounded-l"style="height:auto;background-color:#1a1931">
                     <div class="feature__image block-rounded-m" >
-                      <img src="img/backgrounds/500x500-features-bg-2.jpg" alt="Marvio Feature Background">
+                      <img src="img/Royale Rumble Vertical.png" alt="Marvio Feature Background">
                       <div class="feature__icon">
                         <!-- <img src="img/svg/icon-feature-2.svg" alt="Marvio Feature Icon"> -->
                       </div>
                     </div>
                     <div class="feature__descr">
-                      <span class="feature__subtitle">Bright</span>
-                      <h4 class="feature__title">Sai music fest</h4>
+                      <span class="feature__subtitle">Gaming</span>
+                      <h4 class="feature__title">Royal rumble</h4>
                       <!-- <p class="feature__text">lets rock the night with light and colours</p> -->
                     </div>
                     <div style="display: flex;justify-content: flex-end;">
@@ -465,14 +536,14 @@
                 <div class="swiper-slide">
                   <div class="feature__item block-rounded-l"style="height:auto;background-color:#1a1931">
                     <div class="feature__image block-rounded-m" >
-                      <img src="img/backgrounds/500x500-features-bg-2.jpg" alt="Marvio Feature Background">
+                      <img src="img/Code Retroflex Vertical.png" alt="Marvio Feature Background">
                       <div class="feature__icon">
                         <!-- <img src="img/svg/icon-feature-2.svg" alt="Marvio Feature Icon"> -->
                       </div>
                     </div>
                     <div class="feature__descr">
-                      <span class="feature__subtitle">Bright</span>
-                      <h4 class="feature__title">Sai music fest</h4>
+                      <span class="feature__subtitle">Coding</span>
+                      <h4 class="feature__title">Code Retroflex</h4>
                       <!-- <p class="feature__text">lets rock the night with light and colours</p> -->
                     </div>
                     <div style="display: flex;justify-content: flex-end;">
@@ -502,14 +573,14 @@
                 <div class="swiper-slide">
                   <div class="feature__item block-rounded-l"style="height:auto;background-color:#1a1931">
                     <div class="feature__image block-rounded-m" >
-                      <img src="img/backgrounds/500x500-features-bg-2.jpg" alt="Marvio Feature Background">
+                      <img src="img/Pinnacle Vertical.png" alt="Marvio Feature Background">
                       <div class="feature__icon">
                         <!-- <img src="img/svg/icon-feature-2.svg" alt="Marvio Feature Icon"> -->
                       </div>
                     </div>
                     <div class="feature__descr">
-                      <span class="feature__subtitle">Bright</span>
-                      <h4 class="feature__title">Sai music fest</h4>
+                      <span class="feature__subtitle">Project presentation</span>
+                      <h4 class="feature__title">Pinnacle pursuit</h4>
                       <!-- <p class="feature__text">lets rock the night with light and colours</p> -->
                     </div>
                     <div style="display: flex;justify-content: flex-end;">
@@ -536,6 +607,7 @@
                     </p>
                   </div>
                 </div>
+                
               </div>
               <!-- pagination -->
               <div class="swiper-pagination marvio-pagination"style="font-size:1em;"></div>
@@ -543,6 +615,7 @@
               <div class="swiper-button-prev marvio-navigation marvio-prev"style="font-size 2rem;"><i class="fa-solid fa-angle-left fa-2x"></i></div>
               <div class="swiper-button-next marvio-navigation marvio-next"style="font-size 2rem;"><i class="fa-solid fa-angle-right fa-2x"></i>
               </div>
+
             </div>
             <!-- Main Section Swiper Slider Start -->
 
@@ -553,13 +626,8 @@
           <div class="col-12 socials-mobile">
             <ul>
               <li>
-                <a href="https://www.facebook.com/" target="_blank">
-                  <i class="fa-brands fa-facebook"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.instagram.com/" target="_blank">
-                  <i class="fa-brands fa-instagram"></i>
+                <a href="https://instagram.com/xtrofest_5.0?igshid=OGQ5ZDc2ODk2ZA==" target="_blank">
+                  <i class="fa-brands fa-2x fa-instagram"></i>
                 </a>
               </li>
               <!-- <li>
@@ -623,15 +691,15 @@
                     <div class="col-12 col-md-4 feature">
                       <div class="feature__item block-rounded-l">
                         <div class="feature__image block-rounded-m">
-                          <img src="img/backgrounds/500x500-features-bg-1.jpg" alt="Marvio Feature Background">
+                          <img src="img/Pinnacle Vertical.png" alt="Marvio Feature Background">
                           <div class="feature__icon">
                             <!-- <img src="img/svg/icon-feature-1.svg" alt="Marvio Feature Icon"> -->
                           </div>
                         </div>
                         <div class="feature__descr">
-                          <span class="feature__subtitle">Lovely</span>
-                          <h4 class="feature__title">Sai music fest</h4>
-                          <p class="feature__text">lets rock the night with light and colours</p>
+                          <span class="feature__subtitle">Project presentation</span>
+                          <h4 class="feature__title">Pinnacle pursuit</h4>
+                          <p class="feature__text">Elevating Ideas, Igniting Innovation</p>
                         </div>
                         <div style="display: flex;justify-content: flex-end;">
                           <a href="https://grand-kelpie-a812ad.netlify.app/" class="btn-bottom">
@@ -659,9 +727,9 @@
                           </div>
                         </div>
                         <div class="feature__descr">
-                          <span class="feature__subtitle">Bright</span>
-                          <h4 class="feature__title">Sai music fest</h4>
-                          <p class="feature__text">lets rock the night with light and colours</p>
+                          <span class="feature__subtitle">Treasure hunt coding</span>
+                          <h4 class="feature__title">Code O Mania </h4>
+                          <p class="feature__text">The Ultimate Codebreaker Showdown</p>
                         </div>
                         <div style="display: flex;justify-content: flex-end;">
                           <a href="https://grand-kelpie-a812ad.netlify.app/" class="btn-bottom">
@@ -683,15 +751,44 @@
                     <div class="col-12 col-md-4 feature">
                       <div class="feature__item block-rounded-l">
                         <div class="feature__image block-rounded-m">
-                          <img src="img/backgrounds/500x500-features-bg-3.webp" alt="Marvio Feature Background">
+                          <img src="img/web fiesta.png" alt="Marvio Feature Background">
                           <div class="feature__icon">
                             <!-- <img src="img/svg/icon-feature-3.svg" alt="Marvio Feature Icon"> -->
                           </div>
                         </div>
                         <div class="feature__descr">
-                          <span class="feature__subtitle">Unique</span>
-                          <h4 class="feature__title">Sai music fest</h4>
-                          <p class="feature__text">lets rock the night with light and colours</p>
+                          <span class="feature__subtitle">Css designing</span>
+                          <h4 class="feature__title">Webartistry feista</h4>
+                          <p class="feature__text">Reverse the Unseen: Uncover the Code</p>
+                        </div>
+                        <div style="display: flex;justify-content: flex-end;">
+                          <a href="https://grand-kelpie-a812ad.netlify.app/" class="btn-bottom">
+                            <span class="circle2">
+                              <em></em>
+                              <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px"
+                                viewBox="0 0 24 24" width="24px">
+                                <rect fill="none" height="24" width="24" />
+                                <path
+                                  d="M14.29,5.71L14.29,5.71c-0.39,0.39-0.39,1.02,0,1.41L18.17,11H3c-0.55,0-1,0.45-1,1v0c0,0.55,0.45,1,1,1h15.18l-3.88,3.88 c-0.39,0.39-0.39,1.02,0,1.41l0,0c0.39,
+                                0.39,1.02,0.39,1.41,0l5.59-5.59c0.39-0.39,0.39-1.02,0-1.41L15.7,5.71 C15.32,5.32,14.68,5.32,14.29,5.71z" />
+                              </svg>
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-4 feature">
+                      <div class="feature__item block-rounded-l">
+                        <div class="feature__image block-rounded-m">
+                          <img src="img/Code Retroflex Vertical.png" alt="Marvio Feature Background">
+                          <div class="feature__icon">
+                            <!-- <img src="img/svg/icon-feature-3.svg" alt="Marvio Feature Icon"> -->
+                          </div>
+                        </div>
+                        <div class="feature__descr">
+                          <span class="feature__subtitle">Reverse coding                          </span>
+                          <h4 class="feature__title">Code Retroflex</h4>
+                          <p class="feature__text">Reverse the Unseen: Uncover the Code</p>
                         </div>
                         <div style="display: flex;justify-content: flex-end;">
                           <a href="https://grand-kelpie-a812ad.netlify.app/" class="btn-bottom">
@@ -828,9 +925,9 @@
                           </div>
                         </div>
                         <div class="feature__descr">
-                          <span class="feature__subtitle">Lovely</span>
-                          <h4 class="feature__title">Sai music fest</h4>
-                          <p class="feature__text">lets rock the night with light and colours</p>
+                          <span class="feature__subtitle">Talent exposure event</span>
+                          <h4 class="feature__title">Talent Unveil Fest</h4>
+                          <p class="feature__text">Artistry Alive, Spirits Thrive!</p>
                         </div>
                         <div style="display: flex;justify-content: flex-end;">
                           <a href="https://grand-kelpie-a812ad.netlify.app/" class="btn-bottom">
@@ -858,9 +955,9 @@
                           </div>
                         </div>
                         <div class="feature__descr">
-                          <span class="feature__subtitle">Bright</span>
-                          <h4 class="feature__title">Sai music fest</h4>
-                          <p class="feature__text">lets rock the night with light and colours</p>
+                          <span class="feature__subtitle">Quiz based on webseries and k-dramas</span>
+                          <h4 class="feature__title">Nerdverse Nexus</h4>
+                          <p class="feature__text">Throughout heaven and earth, be the honored one!</p>
                         </div>
                         <div style="display: flex;justify-content: flex-end;">
                           <a href="https://grand-kelpie-a812ad.netlify.app/" class="btn-bottom">
@@ -882,15 +979,102 @@
                     <div class="col-12 col-md-4 feature">
                       <div class="feature__item block-rounded-l">
                         <div class="feature__image block-rounded-m">
-                          <img src="img/backgrounds/500x500-features-bg-3.webp" alt="Marvio Feature Background">
+                          <img src="img/Snap Shot Vertical.png" alt="Marvio Feature Background">
                           <div class="feature__icon">
                             <!-- <img src="img/svg/icon-feature-3.svg" alt="Marvio Feature Icon"> -->
                           </div>
                         </div>
                         <div class="feature__descr">
-                          <span class="feature__subtitle">Unique</span>
-                          <h4 class="feature__title">Sai music fest</h4>
-                          <p class="feature__text">lets rock the night with light and colours</p>
+                          <span class="feature__subtitle">Photography</span>
+                          <h4 class="feature__title">Snapshot Symphony</h4>
+                          <p class="feature__text">Picture Perfect: Seize the Frame and Claim the Fame!</p>
+                        </div>
+                        <div style="display: flex;justify-content: flex-end;">
+                          <a href="https://grand-kelpie-a812ad.netlify.app/" class="btn-bottom">
+                            <span class="circle2">
+                              <em></em>
+                              <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px"
+                                viewBox="0 0 24 24" width="24px">
+                                <rect fill="none" height="24" width="24" />
+                                <path
+                                  d="M14.29,5.71L14.29,5.71c-0.39,0.39-0.39,1.02,0,1.41L18.17,11H3c-0.55,0-1,0.45-1,1v0c0,0.55,0.45,1,1,1h15.18l-3.88,3.88 c-0.39,0.39-0.39,1.02,0,1.41l0,0c0.39,
+                                0.39,1.02,0.39,1.41,0l5.59-5.59c0.39-0.39,0.39-1.02,0-1.41L15.7,5.71 C15.32,5.32,14.68,5.32,14.29,5.71z" />
+                              </svg>
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-4 feature">
+                      <div class="feature__item block-rounded-l">
+                        <div class="feature__image block-rounded-m">
+                          <img src="img/Cine Puzzle Vertical.png" alt="Marvio Feature Background">
+                          <div class="feature__icon">
+                            <!-- <img src="img/svg/icon-feature-3.svg" alt="Marvio Feature Icon"> -->
+                          </div>
+                        </div>
+                        <div class="feature__descr">
+                          <span class="feature__subtitle">Connections</span>
+                          <h4 class="feature__title">CinePuzzle</h4>
+                          <p class="feature__text">From Bits to Blockbusters: CinePuzzle Chronicles!</p>
+                        </div>
+                        <div style="display: flex;justify-content: flex-end;">
+                          <a href="https://grand-kelpie-a812ad.netlify.app/" class="btn-bottom">
+                            <span class="circle2">
+                              <em></em>
+                              <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px"
+                                viewBox="0 0 24 24" width="24px">
+                                <rect fill="none" height="24" width="24" />
+                                <path
+                                  d="M14.29,5.71L14.29,5.71c-0.39,0.39-0.39,1.02,0,1.41L18.17,11H3c-0.55,0-1,0.45-1,1v0c0,0.55,0.45,1,1,1h15.18l-3.88,3.88 c-0.39,0.39-0.39,1.02,0,1.41l0,0c0.39,
+                                0.39,1.02,0.39,1.41,0l5.59-5.59c0.39-0.39,0.39-1.02,0-1.41L15.7,5.71 C15.32,5.32,14.68,5.32,14.29,5.71z" />
+                              </svg>
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-4 feature">
+                      <div class="feature__item block-rounded-l">
+                        <div class="feature__image block-rounded-m">
+                          <img src="img/Royale Rumble Vertical.png" alt="Marvio Feature Background">
+                          <div class="feature__icon">
+                            <!-- <img src="img/svg/icon-feature-3.svg" alt="Marvio Feature Icon"> -->
+                          </div>
+                        </div>
+                        <div class="feature__descr">
+                          <span class="feature__subtitle">Gaming</span>
+                          <h4 class="feature__title">Royal Rumble</h4>
+                          <p class="feature__text">Survival of the Fiercest!</p>
+                        </div>
+                        <div style="display: flex;justify-content: flex-end;">
+                          <a href="https://grand-kelpie-a812ad.netlify.app/" class="btn-bottom">
+                            <span class="circle2">
+                              <em></em>
+                              <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px"
+                                viewBox="0 0 24 24" width="24px">
+                                <rect fill="none" height="24" width="24" />
+                                <path
+                                  d="M14.29,5.71L14.29,5.71c-0.39,0.39-0.39,1.02,0,1.41L18.17,11H3c-0.55,0-1,0.45-1,1v0c0,0.55,0.45,1,1,1h15.18l-3.88,3.88 c-0.39,0.39-0.39,1.02,0,1.41l0,0c0.39,
+                                0.39,1.02,0.39,1.41,0l5.59-5.59c0.39-0.39,0.39-1.02,0-1.41L15.7,5.71 C15.32,5.32,14.68,5.32,14.29,5.71z" />
+                              </svg>
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-4 feature">
+                      <div class="feature__item block-rounded-l">
+                        <div class="feature__image block-rounded-m">
+                          <img src="img/Snap Shot Vertical.png" alt="Marvio Feature Background">
+                          <div class="feature__icon">
+                            <!-- <img src="img/svg/icon-feature-3.svg" alt="Marvio Feature Icon"> -->
+                          </div>
+                        </div>
+                        <div class="feature__descr">
+                          <span class="feature__subtitle">Gaming</span>
+                          <h4 class="feature__title">Royal Rumble</h4>
+                          <p class="feature__text">Survival of the Fiercest!</p>
                         </div>
                         <div style="display: flex;justify-content: flex-end;">
                           <a href="https://grand-kelpie-a812ad.netlify.app/" class="btn-bottom">
@@ -912,64 +1096,7 @@
                 </div>
               </div>
             </div>
-            <!-- Section Container - Features End -->
-
-            <!-- Section Container - Skillbars Start -->
-            <!-- <div class="inner__container">
-                <div class="content-block"> -->
-            <!-- skillbar single item -->
-            <!-- <div class="show-skillbar">
-                    <div class="skillbar" data-percent="96">
-                      <span class="skillbar-title">UI/UX Design</span>
-                      <p class="skillbar-bar"></p>
-                      <span class="skill-bar-percent"></span>
-                    </div>
-                  </div> -->
-            <!-- skillbar single item -->
-            <!-- <div class="show-skillbar">
-                    <div class="skillbar" data-percent="90">
-                      <span class="skillbar-title">Branding & Logo Design</span>
-                      <p class="skillbar-bar"></p>
-                      <span class="skill-bar-percent"></span>
-                    </div>
-                  </div> -->
-            <!-- skillbar single item -->
-            <!-- <div class="show-skillbar">
-                    <div class="skillbar" data-percent="87">
-                      <span class="skillbar-title">3D Modeling</span>
-                      <p class="skillbar-bar"></p>
-                      <span class="skill-bar-percent"></span>
-                    </div>
-                  </div> -->
-            <!-- skillbar single item -->
-            <!-- <div class="show-skillbar">
-                    <div class="skillbar" data-percent="98">
-                      <span class="skillbar-title">Illustrations</span>
-                      <p class="skillbar-bar"></p>
-                      <span class="skill-bar-percent"></span>
-                    </div>
-                  </div>
-                </div>
-              </div> -->
-            <!-- Section Container - Skillbars End -->
-
-            <!-- Section Container - Showreel Start -->
-            <!-- <div class="inner__container">
-                <div class="content-block">
-                  <div class="fullwidth-container">
-                    <div class="showreel showreel-image-1 block-rounded-l">
-                      <div class="showreel__button"> -->
-            <!-- video trigger -->
-            <!-- <a href="https://vimeo.com/65036292" id="inner-video-trigger" class="inner-video-trigger">
-                          <em></em>
-                          <i class="fa-solid fa-play"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div> -->
-            <!-- Section Container - Showreel End -->
+          
 
           </div>
         </div>
@@ -1033,7 +1160,7 @@
                             <i class="fa-solid fa-location-crosshairs"></i>
                           </div>
                           <div class="contactdata__text">
-                            <p><a class="contact-link" href="https://goo.gl/maps/nWXKpGaDPuyH6gxRA" target="_blank">sai leo nagar,tambaram<br>chennai,10019</a></p>
+                            <p><a class="contact-link" href="https://goo.gl/maps/nWXKpGaDPuyH6gxRA" target="_blank">Sri sairam engineering college<br>Sai leo nagar<br>West tambaram<br>Chennai-44</a></p>
                           </div>
                         </div>
                         <!-- <div class="contactdata__descr d-flex align-items-start">
@@ -1057,12 +1184,8 @@
                         <div class="contactdata__descr d-flex align-items-start">
                           <ul class="contactdata__socials">
                             <li>
-                              <i class="fa-brands fa-facebook"></i>
-                              <a class="contact-link" href="https://www.facebook.com/" target="_blank">Facebook</a>
-                            </li>
-                            <li>
                               <i class="fa-brands fa-instagram"></i>
-                              <a class="contact-link" href="https://www.instagram.com/" target="_blank">Instagram</a>
+                              <a class="contact-link" href="https://instagram.com/xtrofest_5.0?igshid=OGQ5ZDc2ODk2ZA==" target="_blank">Instagram</a>
                             </li>
                             <!-- <li>
                               <i class="fa-brands fa-twitter"></i>
@@ -1099,13 +1222,13 @@
                           <div class="contactdata__icon">
                             <i class="fa-solid fa-envelope"></i>
                           </div>
-                          <div class="contactdata__text">
+                          <!-- <div class="contactdata__text">
                             <a class="contact-link"
                               href="mailto:example@example.com?subject=Message%20from%20your%20site">xtrofest@marvio.com</a>
                             <br>
                             <a class="contact-link"
                               href="mailto:example@example.com?subject=Message%20from%20your%20site">crescendo@marvio.com</a>
-                          </div>
+                          </div> -->
                         </div>
                       </div>
                     </div>
@@ -1595,6 +1718,13 @@
 
   </div>
   <script>
+    function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+  var music = new Audio('./music.mp3');
+  music.play();
+  music.volume=0.5;
+}
+  
     // var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
     // if (!isChrome){
     //     $('#iframeAudio').remove()

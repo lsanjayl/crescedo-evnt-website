@@ -2329,7 +2329,7 @@ form .inputs-description {
 }
 .header__logo img {
   width: auto;
-  max-width: 130px;
+  /* max-width: 130px; */
 }
 @media only screen and (min-width: 1200px) {
   .header__logo {
